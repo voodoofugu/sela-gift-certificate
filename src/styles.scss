@@ -417,9 +417,9 @@ main {
   }
 
   .ms-arrow-box {
-    top: unset !important;
-    bottom: 0 !important;
-    height: 66px !important;
+    --ms-arrow-top: auto;
+    --ms-arrow-height: 66px;
+    bottom: 0;
   }
 }
 

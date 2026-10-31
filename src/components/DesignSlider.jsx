@@ -38,18 +38,21 @@ export function DesignSlider({
               </button>
             ),
           },
-          bar: designs.map((design, index) => (
-            <div
-              key={design.id}
-              className="design-picker__thumbnail"
-              aria-pressed={index === activeIndex}
-            >
-              <img src={design.image} alt="" />
-            </div>
-          )),
+          bar: {
+            element: designs.map((design, index) => (
+              <div
+                key={design.id}
+                className="design-picker__thumbnail"
+                aria-pressed={index === activeIndex}
+              >
+                <img src={design.image} alt="" />
+              </div>
+            )),
+            maxItems: 3,
+          },
         }}
         trackVisibility
-        loop={true}
+        // loop={true}
         render="virtual"
         initialPosition={initialPosition}
         onScrollPosition={onScrollPosition}
